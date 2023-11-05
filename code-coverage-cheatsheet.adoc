@@ -7,22 +7,40 @@ links:
 
 - https://www.testautomatisierung.org/lexikon/code-coverage/
 - https://www.atlassian.com/continuous-delivery/software-testing/code-coverage
+- https://www.verifysoft.com/de_code_coverage_levels.html
+- https://en.wikipedia.org/wiki/Code_coverage
 
 == About Code Coverage
-
+Code coverage is a percentage measure of the degree to which the source code of a program is executed when a particular test suite is run
 
 == Types of Coverage
 .Table Coverage Types
 |===
 | Type | Mathematical description | Description
 
-|Line Coverage
-|stem:[C_0 = ("Number of covered lines") / ("Total number of lines")]
+|Function coverage
 |
+|Has each function in the program been called?
 
-|Branch Coverage
-|stem:[C_0 = ("Number of covered branches") / ("Total number of branches")]
+|Line Coverage / Statement coverage
+|stem:[C_0 = ("Number of covered lines") / ("Total number of lines")]
+|Has each statement in the program been executed?
+
+|Edge Coverage
 |
+|Has every edge in the control-flow graph been executed?
+
+|Branch Coverage / Decision Coverage
+|stem:[C_0 = ("Number of covered branches") / ("Total number of branches")]
+|Is a subset of Edge Coverage. Given an if-statement, have both the true and false path been executed?
+
+|Condition Coverage
+|
+|Has each Boolean sub-expression evaluated both to true and false? (Also called predicate coverage2)
+
+|Modified condition/decision Coverage (MCDC)
+|
+|Combination of function coverage and branch coverage. Sometimes also called Decision Coverage
 
 |===
 
