@@ -15,31 +15,46 @@ links:
 Code coverage is a percentage measure of the degree to which the source code of a program is executed when a particular test suite is run
 
 == Types of Coverage
+
+Disclaimer: Sometimes the names for coverage types differ! This is also true for namings such as C0, C1 etc.
+Depending on how something is programmed, the number of testcases can vary. E.g. if-statements with logical operators or nested if-statements
+
 .Table Coverage Types
 |===
-| Type | Mathematical description | Description
+| Type | German Term | Mathematical description | Description
 
 |Function coverage
+|
 |
 |Has each function in the program been called?
 
 |Line Coverage / Statement coverage
+|Anweisungsüberdeckung
 |stem:[C_0 = ("Number of covered lines") / ("Total number of lines")]
 |Has each statement in the program been executed?
 
 |Edge Coverage
 |
+|
 |Has every edge in the control-flow graph been executed?
 
 |Branch Coverage / Decision Coverage
-|stem:[C_0 = ("Number of covered branches") / ("Total number of branches")]
+|Entscheidungsüberdeckung
+|stem:[C_1 = ("Number of covered branches") / ("Total number of branches")]
 |Is a subset of Edge Coverage. Given an if-statement, have both the true and false path been executed?
 
 |Condition Coverage
+|Bedingungstest
 |
 |Has each Boolean sub-expression evaluated both to true and false? (Also called predicate coverage2)
 
+|Multiple Condition Coverage (MCC)
+|Mehrfachbedingungstest
+|
+|The combination of the conditions is relevant
+
 |Modified condition/decision Coverage (MCDC)
+|Modifizierter Bedingungs-/Entscheidungstest
 |
 |Combination of function coverage and branch coverage. Sometimes also called Decision Coverage
 
